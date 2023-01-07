@@ -81,18 +81,22 @@ btnRight.addEventListener('click', moveRight);
 btnDown.addEventListener('click', moveDown);
 
 function moveUp() {
-    playerPosition.y -= elementsSize;
+    if (playerPosition.y - elementsSize > elementsSize)
+        playerPosition.y -= elementsSize;
     startGame();
 }
 function moveLeft() {
-    playerPosition.x -= elementsSize;
+    if (playerPosition.x - elementsSize > elementsSize)
+        playerPosition.x -= elementsSize;
     startGame();
 }
 function moveRight() {
-    playerPosition.x += elementsSize;
+    if (playerPosition.x < canvasSize )
+        playerPosition.x += elementsSize;
     startGame();
 }
 function moveDown() {
-    playerPosition.y += elementsSize;
+    if (playerPosition.y < canvasSize)
+        playerPosition.y += elementsSize;
     startGame();
 }
