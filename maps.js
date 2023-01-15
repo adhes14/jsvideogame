@@ -7,11 +7,12 @@ const emojis = {
     '-': ' ',
     'O': '🚪',
     'X': '💣',
-    'I': '🎁',
-    'PLAYER': '💀',
+    'I': '🍖',
+    'PLAYER': '🐶',
     'BOMB_COLLISION': '🔥',
     'GAME_OVER': '👎',
     'WIN': '🏆',
+    'HEART': '❤️'
 };
 
 const maps = [];
@@ -36,7 +37,7 @@ maps.push(`
     X-XXXX-XXX
     XX--XX--XX
     XX--XXX-XX
-    XXXX---IXX
+    XXXXI---XX
     XXXXXXXXXX
 `);
 maps.push(`
