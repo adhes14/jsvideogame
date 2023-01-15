@@ -6,6 +6,8 @@ const btnRight = document.querySelector('#right');
 const btnDown = document.querySelector('#down');
 const livesSpan = document.querySelector('#lives');
 const timeSpan = document.querySelector('#time');
+const recordSpan = document.querySelector('#record');
+const resultP = document.querySelector('#result');
 
 let canvasSize;
 let elementsSize;
@@ -58,7 +60,8 @@ function startGame() {
 
     if (!timestart) {
         timestart = Date.now();
-        timeInterval = setInterval(showTime, 1000);
+        timeInterval = setInterval(showTime, 200);
+        showRecord();
     }
 
     const mapRows = map.trim().split('\n');
@@ -151,6 +154,18 @@ function loseLevel() {
 function winGame() {
     console.log('You won the game');
     clearInterval(timeInterval);
+    const recordTime = localStorage.getItem('record_time');
+    if (recordTime) {
+        if (recordTime >= timePlayer) {
+            localStorage.setItem('record_time', timePlayer);
+            resultP.textContent = 'You did a better record!!! congratulations 🥳';
+        } else {
+            resultP.textContent = 'What a shame 😥!!! You didn\'t get a better record';
+        }
+    } else {
+        localStorage.setItem('record_time', timePlayer);
+        resultP.textContent = 'This is your first time, now you have the challange to overcome your own result!';
+    }
 }
 
 function moveUp() {
@@ -182,5 +197,10 @@ function showLives() {
 
 function showTime() {
     console.log('hello');
-    timeSpan.textContent = Date.now() - timestart;
+    timePlayer = Date.now() - timestart;
+    timeSpan.textContent = timePlayer;
+}
+
+function showRecord() {
+    recordSpan.textContent = localStorage.getItem('record_time');
 }
