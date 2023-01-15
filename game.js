@@ -32,15 +32,12 @@ function setCanvasSize() {
 }
 
 function startGame() {
-    console.log({ canvasSize, elementsSize });
-
     game.font = elementsSize + 'px Verdana';
     game.textAlign = 'end';
 
     const map = maps[0];
     const mapRows = map.trim().split('\n');
     const mapRowCols = mapRows.map(row => row.trim().split(''));
-    console.log({ map, mapRows, mapRowCols });
 
     game.clearRect(0,0,canvasSize, canvasSize);
 
@@ -81,12 +78,12 @@ btnRight.addEventListener('click', moveRight);
 btnDown.addEventListener('click', moveDown);
 
 function moveUp() {
-    if (playerPosition.y - elementsSize > elementsSize)
+    if (playerPosition.y - elementsSize + 1 > elementsSize)
         playerPosition.y -= elementsSize;
     startGame();
 }
 function moveLeft() {
-    if (playerPosition.x - elementsSize > elementsSize)
+    if (playerPosition.x - elementsSize + 1 > elementsSize)
         playerPosition.x -= elementsSize;
     startGame();
 }
