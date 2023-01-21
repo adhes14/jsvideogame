@@ -17,38 +17,38 @@ const emojis = {
 
 const maps = [];
 maps.push(`
-    IXXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    -XXXXXXXXX
-    OXXXXXXXXX
+    I--------X
+    XXXXXXXX-X
+    XXXXXXXX-X
+    XXXXXXXX-X
+    XXXXXXXX-X
+    -XXXXXXX-X
+    -XXXXXXX-X
+    -XXXXXXX-X
+    -XXXXXXX-X
+    O---------
 `);
 maps.push(`
-    O--XXXXXXX
-    X--XXXXXXX
-    XX----XXXX
-    X--XX-XXXX
-    X-XXX--XXX
-    X-XXXX-XXX
-    XX--XX--XX
-    XX--XXX-XX
-    XXXXI---XX
-    XXXXXXXXXX
+    O--XX----X
+    X--XX-XX-X
+    XX----XX-X
+    X--XX-XX-X
+    X-XXX--X--
+    --XXXX-XX-
+    -X--XX--X-
+    -X--XXX-X-
+    -XXXI---X-
+    ---XXXXXX-
 `);
 maps.push(`
-    I-----XXXX
-    XXXXX-XXXX
-    XX----XXXX
-    XX-XXXXXXX
-    XX-----XXX
-    XXXXXX-XXX
-    XX-----XXX
-    XX-XXXXXXX
-    XX-----OXX
-    XXXXXXXXXX
+    ------X---
+    -XXXX-X-X-
+    -X----X-X-
+    -X-XXXXXX-
+    -X--------
+    IXXXXXXXX-
+    XX--------
+    ---XXXXXXX
+    -XXXO----X
+    -----XXX-X
 `);
